@@ -7,10 +7,23 @@
     <meta name="robots" content="noindex" />
 
     <meta charset="utf-8" />
-    <meta name="description" content="{{ page_description }}" />
+
+    {% if page.description %}
+      <meta name="description" content="{{ page.description }}" />
+    {% else %}
+      <meta name="description" content="Creating the vehicles for communicating big ideas and marketing strategy via web and interactive design, video production, podcasting, strategic messaging, branding, copywriting, and multimedia. What's your story?" />
+    {% endif %}
+
+    <meta name="description" content="{{ page.page_description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <link rel="shortcut icon" href="" type="image/x-icon" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/images/favicon.ico">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Titillium+Web'  type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ site.url }}/styles/main.css">
